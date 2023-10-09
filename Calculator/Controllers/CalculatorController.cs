@@ -14,7 +14,7 @@ namespace Calculator.Controllers
         {
             var logger = new SqlLogger();
 
-            logger.LogToSql($"Adding {request.Number1} to {request.Number2}");
+            logger.LogEntry($"Adding {request.Number1} to {request.Number2}");
 
             return new CalculationReult
             {
