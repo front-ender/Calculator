@@ -29,6 +29,27 @@ namespace Calculator.Controllers
             };
         }
 
+        [Route("Addition")]
+        [HttpPost()]
+        public async Task<CalculationResult> Addition([FromBody] CalculationRequestExt request)
+        {
+            var filelogger = new FileLogger(new FileInfo(new StringBuilder(Environment.CurrentDirectory).Append(CalculatorFile).ToString()));
+            var consolelogger = new ConsoleLogger();
+
+            var logEntry = $"Adding {request.Number1}, {request.Number2}, {request.Number3}, {request.Number4}, {request.Number5}";
+            var _ = await filelogger.LogEntry(logEntry);
+            _ = await consolelogger.LogEntry(logEntry);
+
+            decimal number3 = request.Number3 ?? 0;
+            decimal number4 = request.Number4 ?? 0;
+            decimal number5 = request.Number5 ?? 0;
+
+            decimal result = request.Number1 + request.Number2 + number3 + number4 + number5;
+            return new CalculationResult
+            {
+                Result = result,
+            };
+        }
 
 
         /// <summary>
