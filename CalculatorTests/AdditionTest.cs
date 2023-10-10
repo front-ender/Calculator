@@ -6,11 +6,11 @@ namespace CalculatorTests
     public class AdditionTest
     {
         [Fact]
-        public void AddingNumbersGivesCorrectResult()
+        public async void AddingNumbersGivesCorrectResult()
         {
             var calculator = new CalculatorController();
 
-            var result = calculator.Addition(new CalculationRequest { Number1 = 1, Number2 = 2 });
+            var result = await calculator.Addition(new CalculationRequest { Number1 = 1, Number2 = 2 });
 
             Assert.Equal(3, result.Result);
         }

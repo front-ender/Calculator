@@ -1,10 +1,12 @@
 ﻿namespace Calculator.Services
 {
+    /// TODO: Consider using  Action<string> logConsoleAction = m => Console.WriteLine(m);
     public class ConsoleLogger : ILogger
     {
-        public void LogEntry(string message)
+        public async Task<bool> LogEntry(string message)
         {
-            // Code removed for clarity
+            await Task.Delay(20);
+            return false;
         }
     }
 }

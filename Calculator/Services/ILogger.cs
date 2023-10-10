@@ -2,6 +2,6 @@
 {
     public interface ILogger
     {
-        void LogEntry(string message);
+        Task<bool> LogEntry(string message);
     }
 }

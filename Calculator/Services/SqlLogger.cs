@@ -2,9 +2,11 @@
 {
     public class SqlLogger : ILogger
     {
-        public void LogEntry(string message)
+        public async Task<bool> LogEntry(string message)
         {
-            // Code removed for clarity
+            // TODO : Code removed for clarity
+            await Task.Delay(20);
+            return false;
         }
     }
 }
