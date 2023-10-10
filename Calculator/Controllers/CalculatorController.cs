@@ -20,7 +20,6 @@ namespace Calculator.Controllers
         [HttpPost()]
         public async Task<CalculationResult> Addition([FromBody] CalculationRequest request)
         {
-
             var filelogger = new FileLogger(new FileInfo(new StringBuilder(Environment.CurrentDirectory).Append(CalculatorFile).ToString()));
             var consolelogger = new ConsoleLogger();
 
