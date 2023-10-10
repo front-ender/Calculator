@@ -19,7 +19,7 @@ namespace Calculator.Services
         /// TODO : Consider IEnumerable in API for better performance https://stackoverflow.com/questions/39191791/c-sharp-async-within-an-action
         /// </summary>
         /// <param name="message"></param>
-        /// <returns>true if successful</returns>
+        /// <returns>true for success</returns>
         public async Task<bool> LogEntry(string message)
         {
             bool WorkDone = false;
