@@ -11,6 +11,11 @@ namespace Calculator.Controllers
     {
         public const string CalculatorFile = @"\CalculatorLog.txt";
 
+        /// <summary>
+        /// Adds two numbers
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [Route("Addition")]
         [HttpPost()]
         public async Task<CalculationResult> Addition([FromBody] CalculationRequest request)
@@ -29,7 +34,12 @@ namespace Calculator.Controllers
             };
         }
 
-        [Route("Addition")]
+        /// <summary>
+        /// Adds more than two numbers - up to five
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        [Route("AdditionExt")]
         [HttpPost()]
         public async Task<CalculationResult> Addition([FromBody] CalculationRequestExt request)
         {
