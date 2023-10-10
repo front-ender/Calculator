@@ -1,6 +1,6 @@
 ﻿namespace Calculator.Models
 {
-    public class CalculationReult
+    public class CalculationResult
     {
         public decimal Result { get; set; }
     }
