@@ -27,8 +27,7 @@ namespace Calculator.Services
 
             while (!WorkDone && retryCount>0)
             {
-                // Try to get the file handle
-                StringBuilder logConcatenatedWithLineFeed = new StringBuilder().AppendJoin(Environment.NewLine, message);
+                StringBuilder logConcatenatedWithLineFeed = new StringBuilder(message).Append(Environment.NewLine);
 
                 try
                 {
